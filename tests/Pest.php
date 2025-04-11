@@ -27,7 +27,7 @@ uses(TestCase::class)->in('.');
 function createTimezoneEntry(): TimezoneEntry
 {
     return TimezoneEntry::create(
-        TimezoneEntryType::from('standard'),
+        TimezoneEntryType::STANDARD,
         new DateTime('16 may 2020 12:00:00'),
         '+00:00',
         '+02:00'
