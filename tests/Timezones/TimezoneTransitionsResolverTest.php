@@ -18,7 +18,7 @@ test('it gets the correct timezone transitions', function () {
     /** @var \Spatie\IcalendarGenerator\Timezones\TimezoneTransition $first */
     $transition = $transitions[2];
     assertEquals(new DateTime('1967-04-30T02:00:00+00:00'), $transition->start);
-    assertEquals(TimezoneEntryType::from('standard'), $transition->type);
+    assertEquals(TimezoneEntryType::from('daylight'), $transition->type);
     assertEquals(createOffset(5, 0, true), $transition->offsetFrom);
     assertEquals(createOffset(4, 0, true), $transition->offsetTo);
 
@@ -32,14 +32,14 @@ test('it gets the correct timezone transitions', function () {
     /** @var \Spatie\IcalendarGenerator\Timezones\TimezoneTransition $first */
     $transition = $transitions[16];
     assertEquals(new DateTime('1974-01-06T02:00:00+00:00'), $transition->start);
-    assertEquals(TimezoneEntryType::from('standard'), $transition->type);
+    assertEquals(TimezoneEntryType::from('daylight'), $transition->type);
     assertEquals(createOffset(5, 0, true), $transition->offsetFrom);
     assertEquals(createOffset(4, 0, true), $transition->offsetTo);
 
     /** @var \Spatie\IcalendarGenerator\Timezones\TimezoneTransition $first */
     $transition = $transitions[20];
     assertEquals(new DateTime('1976-04-25T02:00:00+00:00'), $transition->start);
-    assertEquals(TimezoneEntryType::from('standard'), $transition->type);
+    assertEquals(TimezoneEntryType::from('daylight'), $transition->type);
     assertEquals(createOffset(5, 0, true), $transition->offsetFrom);
     assertEquals(createOffset(4, 0, true), $transition->offsetTo);
 });
@@ -56,7 +56,7 @@ test('it gets the correct timezone transitions for positive offsets', function (
     /** @var \Spatie\IcalendarGenerator\Timezones\TimezoneTransition $first */
     $transition = $transitions[1];
     assertEquals(new DateTime('2000-03-26T02:00:00+00:00'), $transition->start);
-    assertEquals(TimezoneEntryType::from('standard'), $transition->type);
+    assertEquals(TimezoneEntryType::from('daylight'), $transition->type);
     assertEquals(createOffset(1, 0), $transition->offsetFrom);
     assertEquals(createOffset(2, 0), $transition->offsetTo);
 
@@ -87,7 +87,7 @@ test('it can work with funny timezones', function () {
     /** @var \Spatie\IcalendarGenerator\Timezones\TimezoneTransition $first */
     $transition = $transitions[2];
     assertEquals(new DateTime('2000-10-01T02:45:00+00:00'), $transition->start);
-    assertEquals(TimezoneEntryType::from('standard'), $transition->type);
+    assertEquals(TimezoneEntryType::from('daylight'), $transition->type);
     assertEquals(createOffset(12, 45), $transition->offsetFrom);
     assertEquals(createOffset(13, 45), $transition->offsetTo);
 });

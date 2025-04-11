@@ -69,7 +69,7 @@ class TimezoneTransitionsResolver
             $transition = $transitions[$i];
 
             $type = $transition['isdst']
-                ? TimezoneEntryType::from('standard')
+                ? TimezoneEntryType::from('daylight')
                 : TimezoneEntryType::from('standard');
 
             $offsetFrom = $this->resolveOffset($previousTransition['offset']);

@@ -17,4 +17,12 @@ class TimezoneEntryType extends Enum
             'daylight' => 'DAYLIGHT',
         ];
     }
+
+    protected static function labels(): array
+    {
+        return [
+            'standard' => 'Standard Time',
+            'daylight' => 'Daylight Time',
+        ];
+    }
 }

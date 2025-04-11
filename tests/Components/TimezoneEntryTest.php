@@ -41,7 +41,7 @@ test('it can create a standard entry with negative offsets', function () {
 
 test('it can create a daylight entry', function () {
     $payload = TimezoneEntry::create(
-        TimezoneEntryType::from('standard'),
+        TimezoneEntryType::from('daylight'),
         new DateTime('16 may 2020 12:00:00'),
         '+00:00',
         '+02:00'
@@ -86,7 +86,7 @@ test('it can set a rrule', function () {
 
 test('it can write out a timezone entry', function () {
     $payload = TimezoneEntry::create(
-        TimezoneEntryType::from('standard'),
+        TimezoneEntryType::from('daylight'),
         new DateTime('16 may 2020 12:00:00'),
         '+00:00',
         '+02:00'

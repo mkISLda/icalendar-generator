@@ -348,7 +348,7 @@ You can manually add timezones to a calendar if desired as such:
 
 ```php
 $timezoneEntry = TimezoneEntry::create(
-    TimezoneEntryType::from('standard'),
+    TimezoneEntryType::from('daylight'),
     new DateTime('23 march 2020'),
     '+00:00',
     '+02:00'
